@@ -1,10 +1,8 @@
-##########################################################################
-# (c) 2013 HAN/Martijn van der Bruggen                                   #
-# Dictionaries voor het gebruik bij de afvinkopdrachten van HBI-Cou3a    #
-# Update: 24-feb-2013 voorzien van commentaar en bestandsnaam aangepast  #
-##########################################################################
-
 def afvink3():
+    """
+    Vraagt om een dna sequentie. Deze DNA sequentie wordt vervolgens vertaald
+    naar de bijbehorende aminozuursequentie
+    """
     triplet = {'ttt': 'F', 'tct': 'S', 'tat': 'Y', 'tgt': 'C',
                'ttc': 'F', 'tcc': 'S', 'tac': 'Y', 'tgc': 'C',
                'tta': 'L', 'tca': 'S', 'taa': '*', 'tga': '*',
@@ -23,31 +21,7 @@ def afvink3():
                'gtg': 'V', 'gcg': 'A', 'gag': 'E', 'ggg': 'G'
                }
 
-    eiwitten = {"Ala": ["GCU", "GCC", "GCA", "GCG"],
-                "Arg": ["CGU", "CGC", "CGA", "CGG", "AGA", "AGG"],
-                "Asn": ["AAU", "AAC"],
-                "Asp": ["GAU", "GAC"],
-                "Cys": ["UGU", "UGC"],
-                "Gln": ["CAA", "CAG"],
-                "Glu": ["GAA", "GAG"],
-                "Gly": ["GGU", "GGC", "GGA", "GGG"],
-                "His": ["CAU", "CAC"],
-                "Ile": ["AUU", "AUC", "AUA"],
-                "Leu": ["UUA", "UUG", "CUU", "CUC", "CUA", "CUG"],
-                "Lys": ["AAA", "AAG"],
-                "Met": ["AUG"],
-                "Phe": ["UUU", "UUC"],
-                "Pro": ["CCU", "CCC", "CCA", "CCG"],
-                "Ser": ["UCU", "UCC", "UCA", "UCG", "AGU", "AGC"],
-                "Thr": ["ACU", "ACC", "ACA", "ACG"],
-                "Trp": ["UGG"],
-                "Tyr": ["UAU", "UAC"],
-                "Val": ["GUU", "GUC", "GUA", "GUG"],
-                "Start": ["AUG", "CUG", "UUG", "GUG", "AUU"],
-                "Stop": ["UAG", "UGA", "UAA"]
-                }
-
-    dnaseq = input("Geef een RNA sequentie: ")
+    dnaseq = input("Geef een DNA sequentie: ")
     dnaseq = dnaseq.lower()
     lijst = dnaseq.replace("", " ").split(" ")
     lijst.remove("")
